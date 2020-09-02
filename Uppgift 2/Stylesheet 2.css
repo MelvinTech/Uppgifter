@@ -7,10 +7,29 @@ h1
 }
 h2,h3
 {
+    color: cornsilk;
     font-size: 100%;
     background-color: green
 }
 p
 {
     font-size: 100%;
+}
+.text
+{
+    color: wheat;
+    background-color: brown;
+    text-align: center;
+}
+a
+{
+    text-decoration : none;
+}
+.align
+{
+    text-align: right;
+}
+.border
+{
+    border: brown solid 10px;
 }
