@@ -1,0 +1,71 @@
+body
+{
+    background-image: url(https://wallpapercave.com/wp/wp4714942.jpg);
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 20% auto 20%;
+    grid-template-areas: 
+      ". header"
+      "nav main"
+      "footer footer";
+    gap: 4px;
+}
+.nested
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+ .nested ul, a
+{
+    border: 1px solid rgb(235, 235, 186);
+    padding: 1px;
+    margin: 0px;
+}
+header
+{
+    grid-column: span 2;
+    grid-row: 1;
+    background-color: skyblue;
+}
+nav
+{
+    background-image: url(https://i.imgur.com/qShtgt9.jpg);
+    grid-column: 1;
+    grid-row: 2;
+}
+main
+{
+    grid-column: 2;
+    grid-row: 2;
+}
+footer
+{
+    background-color: skyblue;
+    grid-column: span 2;
+    grid-row: 3;
+}
+h1
+{ 
+    color:rgb(59, 58, 58);
+    font-size: 25px;
+    font-family: Times;
+}
+h2,h3
+{
+    color: rgb(59, 58, 58);
+    font-size: 140%;
+    background-color: skyblue;
+}
+a
+{
+    text-decoration: none;
+    color: ivory;
+    font-size: 120%;
+}
