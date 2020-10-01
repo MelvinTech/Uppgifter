@@ -1,7 +1,9 @@
 body
 {
+    background-color: lightcoral;
     background-image: url(https://wallpapercave.com/wp/wp4714942.jpg);
-    /*Gör så att mina bakgrund blir bilden från länken*/
+    /*Gör så att mina bakgrund blir bilden från länken eller färgen
+     lightcoral ifall bilden inte kunde laddas in*/
 }
 
 .container /*skapar en överliggande grid för att strukturera hemsidan*/
@@ -18,12 +20,12 @@ body
 .nested  /*Jag använder klassen för att skapa en grid innan för .container griden*/
 {
     display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 10px;
     text-align: center;
 }
- .nested ul, a /*Jag använder denna gruppselektor för att ändra designen på länkar och listor i nav*/
+ .nested ul, a /*Jag använder denna gruppselektor för
+             att ändra designen på länkar och listor i nav*/
 {
     border: 3px solid rgb(235, 235, 186);
     padding: 1px;
