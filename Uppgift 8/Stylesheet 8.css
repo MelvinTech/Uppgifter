@@ -2,40 +2,46 @@ body
 {
     background-color: lightcoral;
     background-image: url(https://wallpapercave.com/wp/wp4714942.jpg);
-    /*Gör så att mina bakgrund blir bilden från länken eller färgen
-     lightcoral ifall bilden inte kunde laddas in*/
+    /*Gör så att min bakgrund blir bilden från länken eller färgen
+     lightcoral ifall bilden inte kan laddas in*/
 }
 
 .container /*skapar en överliggande grid för att strukturera hemsidan*/
 {
     display: grid;
     grid-template-columns: 15% auto;
-    grid-template-rows: auto 580px auto;
+    grid-template-rows: auto 600px auto;
     grid-template-areas: 
       ". header"
       "nav main"
       "footer footer";
     gap: 4px;
 }
-.nested  /*Jag använder klassen för att skapa en grid innan för .container griden*/
+.nav_dif  /*Jag använder klassen för att skapa en grid innan för .container griden*/
 {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 10px;
     text-align: center;
 }
- .nested ul, a /*Jag använder denna gruppselektor för
-             att ändra designen på länkar och listor i nav*/
+.nav_dif a /*Jag använder denna typselektor för att ändra designen på länkar och listor i nav*/
 {
+    text-decoration: none;
+    color: ivory;
+    font-size: 140%;
     border: 3px solid rgb(235, 235, 186);
     padding: 1px;
-    margin: 0px;
+}
+.Main_dif
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 header
 {
     grid-column: span 2;
     grid-row: 1;
-    background-color: skyblue;
+    background-color: rgba(135, 207, 235, 0.80);
 }
 nav
 {
@@ -45,34 +51,53 @@ nav
 }
 main
 {
+    background-color: rgba(255, 250, 250, 0.05);
     grid-column: 2;
     grid-row: 2;
 }
+main a 
+{
+    color: wheat;
+    ;
+}
 footer
 {
-    background-color: skyblue;
+    background-color: rgba(135, 207, 235, 0.80);
     grid-column: span 2;
     grid-row: 3;
 }
 h1
 { 
+    text-indent: 20px;
+    text-decoration: underline;
     color:rgb(59, 58, 58);
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
 }
 h2,h3
 {
     color: rgb(59, 58, 58);
     font-size: 170%;
-    background-color: skyblue;
+    background-color: rgba(135, 207, 235, 0.60);
+}
+h4
+{
+    color: rgb(59, 58, 58,);
+    background-color: rgba(135, 207, 235, 0.60);
+    font-size: 150%;
 }
 p
 {
+    text-indent: 20px;
     font-size: 120%;
 }
-a
+dt
 {
-    text-decoration: none;
-    color: ivory;
-    font-size: 140%;
+    text-indent: 20px;
+    font-size: 120%;
+    text-decoration: underline;
+}
+dd
+{
+    font-size: 110%;
 }
