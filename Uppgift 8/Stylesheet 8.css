@@ -8,7 +8,6 @@ body
 
 .container /*skapar en överliggande grid för att strukturera hemsidan*/
 {
-    min-height: 90vh;
     display: grid;
     grid-template-columns: 15% auto;
     grid-template-rows: auto 80% auto;
@@ -17,6 +16,7 @@ body
       "nav main"
       "footer footer";
     gap: 4px;
+    min-height: 90vh;
 }
 .nav_dif  /*Jag använder klassen för att skapa en grid innan för .container griden*/
 {
@@ -33,12 +33,12 @@ body
     border: 3px solid rgb(235, 235, 186);
     padding: 1px;
 }
-.Main_dif /*Jag använder denna klass för att enkelt kunna sätta in en bild med länk på sidan*/
+.Grid_dif /*Jag använder denna klass för att enkelt kunna lägga till en extra kolumn på sidan*/
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-header
+header /* Ändrar utseendet på header*/
 {
     grid-column: span 2;
     grid-row: 1;
@@ -72,14 +72,20 @@ table, th, td
     height: 20px;
     border: 1px solid black;
 }
-th:first-of-type
+th:first-of-type /*Gör så att första th är 220 pixlar lång i en ny tabell*/
 {
     width: 220px;
 }
-tr:nth-child(odd)
+tr:nth-child(odd) /*Gör så att varanan rad i tabellen har en annan färg*/
 {
-    background-image: linear-gradient(to right, rgba(135, 207, 235, 1), rgba(135, 207, 235, 0.10));
+    background-image: linear-gradient(to right, rgba(135, 207, 235, 1), rgba(135, 207, 235, 0.3));
 }
+caption
+{
+    font-size: 120%;
+}
+
+/*Följande typslektorer förändrar utseendet på sina utvalda taggar*/
 h1
 { 
     text-indent: 20px;
@@ -91,18 +97,18 @@ h1
 h2
 {
     color: rgb(59, 58, 58);
-    font-size: 170%;
+    font-size: 180%;
     background-image: linear-gradient(to right, rgba(135, 207, 235, 1), rgba(135, 207, 235, 0.10));
 }
 h3
 {
-    color: rgb(59, 58, 58,);
+    color: rgb(59, 58, 58);
     background-image: linear-gradient(to right, rgba(135, 207, 235, 1), rgba(135, 207, 235, 0.10));
     font-size: 150%;
 }
 p
 {
-    text-indent: 20px;
+    text-indent: 0px;
     font-size: 120%;
 }
 dt
