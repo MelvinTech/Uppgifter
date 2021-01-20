@@ -1,0 +1,14 @@
+.circle{
+    height: 100%;
+    width: 50vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+.Rectangle{
+    height: 50vW;
+    width: 70%;
+    background-color: #000000;
+    display: inline-block;
+}
