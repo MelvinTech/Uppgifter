@@ -1,0 +1,24 @@
+.grid{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas:
+    "blue red"
+    "green yellow";
+}
+
+.blue{
+    background-color: blue;
+}
+.blue h1{
+    font-size: 5vw;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
