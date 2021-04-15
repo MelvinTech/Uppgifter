@@ -1,0 +1,50 @@
+
+
+@media only screen and (min-width: 600px) {
+   #Sida_1 {
+       display: grid;
+       grid-template-rows: 15vh 10vh 60vh 15vh;
+       grid-template-columns: 1fr;
+       grid-area: 
+       "header"
+       "nav"
+       "main"
+       "footer";
+    
+        gap: 0px;
+        margin: 0;
+   }
+
+   #Sida_1 header {
+       text-align: center;
+       background-color: rgb(197, 70, 236);
+
+       font-size: 4vh;
+   }
+
+   #Sida_1 nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+    font-size: 3vh;
+    border: 0.5vh solid grey;
+   }
+
+   #Sida_1 main {
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+    margin-left: 20vw;
+    margin-right: 20vw;
+    text-align: center;
+    border: 0.5vh solid grey;
+   }
+
+   #Sida_1 footer {
+       text-align: center;
+       border: 0.5vh solid grey;
+   }
+  }
