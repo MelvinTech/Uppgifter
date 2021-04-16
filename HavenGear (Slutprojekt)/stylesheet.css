@@ -1,9 +1,60 @@
+/*Byt färger*/
 
+#Grund {
+    display: grid;
+    grid-template-rows: 15vh 25vh 100vh 10vh;
+    grid-area: 
+    "Header"
+    "nav"
+    "main"
+    "footer";
+
+    gap: 0px;
+    margin: 0;
+}
+
+#Grund header {
+    text-align: center;
+    background-color: rgb(197, 70, 236);
+
+    font-size: 3vh;
+}
+
+#Grund nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    text-align: center;
+    font-size: 3vh;
+}
+
+#Grund main {
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+    margin-top: 1.5vh;
+    text-align: center;
+    border: 0.5vh solid grey;
+}
+
+#Grund footer {
+   text-align: center;
+   margin-top: 1.5vh;
+   border: 0.5vh solid grey;
+}
+ 
+#Grund a {
+    text-decoration: none;
+    color: black;
+
+    border: 0.5vh solid rgb(156, 74, 156); 
+    background-color: violet;
+}
 
 @media only screen and (min-width: 600px) {
-   #Sida_1 {
+   #Grund {
        display: grid;
-       grid-template-rows: 15vh 10vh 60vh 15vh;
+       grid-template-rows: 15vh 10vh 100vh 10vh;
        grid-template-columns: 1fr;
        grid-area: 
        "header"
@@ -15,36 +66,46 @@
         margin: 0;
    }
 
-   #Sida_1 header {
+   #Grund header {
        text-align: center;
        background-color: rgb(197, 70, 236);
 
        font-size: 4vh;
    }
 
-   #Sida_1 nav {
+   #Grund nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.2vh;
 
     margin-left: 10vw;
     margin-right: 10vw;
+
     text-align: center;
     font-size: 3vh;
-    border: 0.5vh solid grey;
    }
 
-   #Sida_1 main {
+   #Grund main {
     display: grid;
     grid-template-rows: 50% 50%;
 
+    margin-top: 1.5vh;
     margin-left: 20vw;
     margin-right: 20vw;
     text-align: center;
     border: 0.5vh solid grey;
    }
 
-   #Sida_1 footer {
+   #Grund footer {
        text-align: center;
        border: 0.5vh solid grey;
    }
-  }
+
+   #Grund a {
+    text-decoration: none;
+    color: black;
+
+    border: 0.5vh solid rgb(156, 74, 156); 
+    background-color: violet;
+    }
+}
