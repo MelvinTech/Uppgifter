@@ -1,8 +1,8 @@
 /*Byt färger*/
 
-#Grund {
+#Index {
     display: grid;
-    grid-template-rows: 15vh 25vh 100vh 10vh;
+    grid-template-rows: 15vh 25vh auto 10vh;
     grid-area: 
     "Header"
     "nav"
@@ -13,14 +13,14 @@
     margin: 0;
 }
 
-#Grund header {
+#Index header {
     text-align: center;
     background-color: rgb(197, 70, 236);
 
     font-size: 3vh;
 }
 
-#Grund nav {
+#Index nav {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 
@@ -28,7 +28,7 @@
     font-size: 3vh;
 }
 
-#Grund main {
+#Index main {
     display: grid;
     grid-template-rows: 50% 50%;
 
@@ -37,24 +37,41 @@
     border: 0.5vh solid grey;
 }
 
-#Grund footer {
+#Index article{
+    margin: 0.5vh;
+    border: 0.5vh solid grey;
+    border-radius: 10px;
+}
+
+#Index img{
+    width: 95vw;
+    height: 30vh;
+    
+}
+
+#Index footer {
    text-align: center;
    margin-top: 1.5vh;
    border: 0.5vh solid grey;
 }
  
-#Grund a {
+#Index nav a {
     text-decoration: none;
     color: black;
 
-    border: 0.5vh solid rgb(156, 74, 156); 
-    background-color: violet;
+    border: 0.5vh solid rgb(14, 6, 14); 
+    background-color: rgb(88, 86, 197);
+}
+
+#Index article a{
+    text-decoration: none;
+    color:rgb(14, 6, 14);
 }
 
 @media only screen and (min-width: 600px) {
-   #Grund {
+   #Index {
        display: grid;
-       grid-template-rows: 15vh 10vh 100vh 10vh;
+       grid-template-rows: 15vh 5vh auto 10vh;
        grid-template-columns: 1fr;
        grid-area: 
        "header"
@@ -66,46 +83,62 @@
         margin: 0;
    }
 
-   #Grund header {
+   #Index header {
        text-align: center;
        background-color: rgb(197, 70, 236);
 
        font-size: 4vh;
    }
 
-   #Grund nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 0.2vh;
+   #Index nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 0.2vh;
 
-    margin-left: 10vw;
-    margin-right: 10vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
 
-    text-align: center;
-    font-size: 3vh;
+        text-align: center;
+        font-size: 3vh;
    }
 
-   #Grund main {
-    display: grid;
-    grid-template-rows: 50% 50%;
+   #Index main {
+        display: grid;
+        grid-template-rows: 50% 50%;
 
-    margin-top: 1.5vh;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    text-align: center;
-    border: 0.5vh solid grey;
+        margin-top: 1vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        text-align: center;
+        border: 0.5vh solid grey;
    }
 
-   #Grund footer {
+   #Index article{
+        margin: 0.5vh;
+        border: 0.5vh solid grey;
+        border-radius: 10px;
+   }
+
+   #Index img{
+        width: 50vw;
+        height: 20vh;
+    }
+
+   #Index footer {
        text-align: center;
        border: 0.5vh solid grey;
    }
 
-   #Grund a {
-    text-decoration: none;
-    color: black;
+   #Index nav a {
+        text-decoration: none;
+        color: black;
 
-    border: 0.5vh solid rgb(156, 74, 156); 
-    background-color: violet;
+        border: 0.5vh solid rgb(29, 14, 29); 
+        background-color: rgb(112, 110, 236);
+    }
+
+    #Index article a{
+        text-decoration: none;
+        color:rgb(14, 6, 14);
     }
 }
