@@ -1,8 +1,8 @@
-/*Byt färger*/
+/*Byt färger och bilder*/
 
 #Index {
     display: grid;
-    grid-template-rows: 15vh 25vh auto 10vh;
+    grid-template-rows: 15vh auto auto 10vh;
     grid-area: 
     "Header"
     "nav"
@@ -20,12 +20,34 @@
     font-size: 3vh;
 }
 
-#Index nav {
+#Index nav input{
+    position: relative;
+    float: right;
+    margin-top: -8vh;
+    margin-right: 8vw;
+}
+#Index nav label{
+    position: relative;
+    float: right;
+    margin-top: -6vh;
+    margin-right: 6vw;
+
+    display: none;
+}
+
+#Index nav input:checked ~ div{
+    display: grid;
+}
+
+#Index nav div {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 
+    gap: 1px;
     text-align: center;
     font-size: 3vh;
+
+    display: none;
 }
 
 #Index main {
@@ -58,9 +80,7 @@
 #Index nav a {
     text-decoration: none;
     color: black;
-
-    border: 0.5vh solid rgb(14, 6, 14); 
-    background-color: rgb(88, 86, 197);
+    background-color: rgb(206, 205, 236);
 }
 
 #Index article a{
@@ -90,16 +110,19 @@
        font-size: 4vh;
    }
 
-   #Index nav {
+   #Index nav div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 0.2vh;
 
         margin-left: 10vw;
         margin-right: 10vw;
-
+        column-gap: 1px;
         text-align: center;
         font-size: 3vh;
+   }
+   #Index nav input{
+       display: none;
    }
 
    #Index main {
@@ -113,15 +136,21 @@
         border: 0.5vh solid grey;
    }
 
+   main div:hover {
+       background-color: white;
+       transform: scale(1.05, 1.05);
+   }
+
    #Index article{
         margin: 0.5vh;
         border: 0.5vh solid grey;
+        
         border-radius: 10px;
    }
 
    #Index img{
         width: 50vw;
-        height: 20vh;
+        height: 40vh;
     }
 
    #Index footer {
@@ -133,8 +162,7 @@
         text-decoration: none;
         color: black;
 
-        border: 0.5vh solid rgb(29, 14, 29); 
-        background-color: rgb(112, 110, 236);
+        background-color: rgb(188, 188, 235);
     }
 
     #Index article a{
