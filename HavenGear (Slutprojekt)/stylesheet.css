@@ -88,6 +88,97 @@
     color:rgb(14, 6, 14);
 }
 
+/*//////////////////////////////////*/
+
+#Recension {
+    display: grid;
+    grid-template-rows: 15vh auto auto 10vh;
+    grid-area: 
+    "Header"
+    "nav"
+    "main"
+    "footer";
+
+    gap: 0px;
+    margin: 0;
+}
+
+#Recension header {
+    text-align: center;
+    background-color: rgb(197, 70, 236);
+
+    font-size: 3vh;
+}
+
+#Recension nav input{
+    position: relative;
+    float: right;
+    margin-top: -8vh;
+    margin-right: 8vw;
+}
+#Recension nav label{
+    position: relative;
+    float: right;
+    margin-top: -6vh;
+    margin-right: 6vw;
+
+    display: none;
+}
+
+#Recension nav input:checked ~ div{
+    display: grid;
+}
+
+#Recension nav div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 1px;
+    text-align: center;
+    font-size: 3vh;
+
+    display: none;
+}
+
+#Recension main{
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+#Recension main div {
+    display: grid;
+    grid-template-rows: auto auto;
+
+    margin: 2vh;
+}
+
+#Recension img {
+    width: 95vw;
+    height: 30vh;
+}
+
+#Recension iframe{
+    
+    width: 95vw;
+    height: 30vh;
+}
+
+#Recension audio{
+    margin-left: 13vh;
+}
+
+#Recension footer {
+   text-align: center;
+   margin-top: 1.5vh;
+   border: 0.5vh solid grey;
+}
+ 
+#Recension nav a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(206, 205, 236);
+}
+
 @media only screen and (min-width: 600px) {
    #Index {
        display: grid;
@@ -136,11 +227,6 @@
         border: 0.5vh solid grey;
    }
 
-   main div:hover {
-       background-color: white;
-       transform: scale(1.05, 1.05);
-   }
-
    #Index article{
         margin: 0.5vh;
         border: 0.5vh solid grey;
@@ -166,6 +252,84 @@
     }
 
     #Index article a{
+        text-decoration: none;
+        color:rgb(14, 6, 14);
+    }
+
+    /*/////////////////////////////*/
+
+    #Recension {
+        display: grid;
+        grid-template-rows: 15vh auto auto 10vh;
+        grid-template-columns: 1fr;
+        grid-area: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+     
+        gap: 0px;
+        margin: 0;
+    }
+ 
+    #Recension header {
+        text-align: center;
+        background-color: rgb(197, 70, 236);
+ 
+        font-size: 4vh;
+    }
+ 
+    #Recension nav div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 0.2vh;
+ 
+        margin-left: 10vw;
+        margin-right: 10vw;
+        column-gap: 1px;
+        text-align: center;
+        font-size: 3vh;
+    }
+    #Recension nav input{
+        display: none;
+    }
+ 
+    #Recension main {
+        margin-top: -8vh;
+    }
+
+    #Recension main div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+    #Recension img{
+        width: 46vw;
+        height: 60vh;
+    }
+
+    #Recension Iframe{
+        width: 46vw;
+        height: 60vh;
+    }
+
+    #Recension audio{
+        margin-top: 3vh;
+    }
+ 
+    #Recension footer {
+        text-align: center;
+        border: 0.5vh solid grey;
+    }
+ 
+    #Recension nav a {
+        text-decoration: none;
+        color: black;
+ 
+        background-color: rgb(188, 188, 235);
+    }
+ 
+    #Recension article a{
         text-decoration: none;
         color:rgb(14, 6, 14);
     }
