@@ -76,7 +76,12 @@
    margin-top: 1.5vh;
    border: 0.5vh solid grey;
 }
- 
+
+#Index a{
+    text-decoration: none;
+    color: black;
+}
+
 #Index nav a {
     text-decoration: none;
     color: black;
@@ -172,12 +177,111 @@
    margin-top: 1.5vh;
    border: 0.5vh solid grey;
 }
- 
+
+#Recension a{
+    text-decoration: none;
+    color: black;
+}
+
 #Recension nav a {
     text-decoration: none;
     color: black;
     background-color: rgb(206, 205, 236);
 }
+
+/************************************************/
+
+#List {
+    display: grid;
+    grid-template-rows: 15vh auto auto 10vh;
+    grid-area: 
+    "Header"
+    "nav"
+    "main"
+    "footer";
+
+    gap: 0px;
+    margin: 0;
+}
+
+#List header {
+    text-align: center;
+    background-color: rgb(197, 70, 236);
+
+    font-size: 3vh;
+}
+
+#List nav input{
+    position: relative;
+    float: right;
+    margin-top: -8vh;
+    margin-right: 8vw;
+}
+#List nav label{
+    position: relative;
+    float: right;
+    margin-top: -6vh;
+    margin-right: 6vw;
+
+    display: none;
+}
+
+#List nav input:checked ~ div{
+    display: grid;
+}
+
+#List nav div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 1px;
+    text-align: center;
+    font-size: 3vh;
+
+    display: none;
+}
+
+#List main {
+    margin-top: 1.5vh;
+    text-align: center;
+    border: 0.5vh solid grey;
+}
+
+#List article{
+    margin: 0.5vh;
+    border: 0.5vh solid grey;
+    border-radius: 10px;
+}
+
+#List img{
+    width: 100vw;
+    height: 20vh;
+    
+}
+
+#List footer {
+   text-align: center;
+   margin-top: 1.5vh;
+   border: 0.5vh solid grey;
+}
+
+#List a{
+    text-decoration: none;
+    color: black;
+}
+
+#List nav a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(206, 205, 236);
+}
+
+#List article a{
+    text-decoration: none;
+    color:rgb(14, 6, 14);
+}
+
+/*//////////////////////////////////*/
 
 @media only screen and (min-width: 600px) {
    #Index {
@@ -242,6 +346,11 @@
    #Index footer {
        text-align: center;
        border: 0.5vh solid grey;
+   }
+
+   #Index a{
+       text-decoration: none;
+       color: black;
    }
 
    #Index nav a {
@@ -321,16 +430,103 @@
         text-align: center;
         border: 0.5vh solid grey;
     }
- 
+    
+    #Recension a{
+        text-decoration: none;
+        color: black;
+    }
+
     #Recension nav a {
         text-decoration: none;
         color: black;
  
         background-color: rgb(188, 188, 235);
     }
- 
+    
     #Recension article a{
         text-decoration: none;
         color:rgb(14, 6, 14);
     }
+
+    /*//////////////////////////////////////*/
+
+    #List {
+        display: grid;
+        grid-template-rows: 15vh 5vh auto 10vh;
+        grid-template-columns: 1fr;
+        grid-area: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+     
+         gap: 0px;
+         margin: 0;
+    }
+ 
+    #List header {
+        text-align: center;
+        background-color: rgb(197, 70, 236);
+ 
+        font-size: 4vh;
+    }
+ 
+    #List nav div {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         column-gap: 0.2vh;
+ 
+         margin-left: 10vw;
+         margin-right: 10vw;
+         column-gap: 1px;
+         text-align: center;
+         font-size: 3vh;
+    }
+    #List nav input{
+        display: none;
+    }
+ 
+    #List main {
+         margin-top: 1vh;
+         margin-left: 20vw;
+         margin-right: 20vw;
+         text-align: center;
+         border: 0.5vh solid grey;
+    }
+ 
+    #List article{
+         margin: 0.5vh;
+         border: 0.5vh solid grey;
+         
+         border-radius: 10px;
+    }
+ 
+    #List img{
+         width: 50vw;
+         height: 30vh;
+     }
+ 
+    #List footer {
+        text-align: center;
+        border: 0.5vh solid grey;
+    }
+ 
+    #List a{
+        text-decoration: none;
+        color: black;
+    }
+ 
+    #List nav a {
+        text-decoration: none;
+        color: black;
+ 
+        background-color: rgb(188, 188, 235);
+     }
+ 
+     #List article a{
+        text-decoration: none;
+        color:rgb(14, 6, 14);
+     }
+ 
+     /*/////////////////////////////*/
 }
