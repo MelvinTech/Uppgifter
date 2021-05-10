@@ -135,7 +135,7 @@ table, td, th {
     height: 30vh;
 }
 
-#Recension iframe{
+#Recension video{
     
     width: 95vw;
     height: 30vh;
@@ -317,7 +317,7 @@ table, td, th {
         height: 60vh;
     }
 
-    #Recension Iframe{
+    #Recension video{
         width: 46vw;
         height: 60vh;
     }
