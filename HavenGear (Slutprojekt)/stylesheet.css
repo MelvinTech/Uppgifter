@@ -82,6 +82,10 @@ nav a {
     background-color: rgb(206, 205, 236);
 }
 
+table, td, th {
+    border: 2px solid grey;
+}
+
 #Index main {
     display: grid;
     grid-template-rows: auto;
