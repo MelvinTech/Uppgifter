@@ -1,66 +1,69 @@
-body{
+body{ /*Skapar en grunddesign*/
     background-image: url("background.jpg");
-    background-color: rgba(0, 0, 0, 0.219);
+    background-color: rgba(175, 175, 175, 0.377);
 
     display: grid;
     grid-template-rows: 15vh auto auto 10vh;
-    grid-area: 
-    "Header"
-    "nav"
-    "main"
-    "footer";
 
     gap: 0px;
-    margin: 0;
+    margin: 0%;
 
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
+header { /*ger headern en bakgrundsfärg samt ger dess text en annan storklek.*/
     background-color: rgba(156, 36, 192, 0.75);
 
     font-size: 4vh;
 }
 
-h1{
+h1{ /*Bestämmer hur långt ifrån vänstra sidan och toppen som h1 ska vara.*/
     margin-left: 4vw;
     margin-top: 3vh;
 }
 
-/*Följande fyra används för att skapa en drop-down meny*/
-nav input{ 
+nav input{ /*Berättar var för någonstans som knappen för drop-down menyn ska placeras.*/
     position: relative;
     float: right;
-    margin-top: -8vh;
+    margin-top: -8vh; /*Negativ marginal används för att få den närmare toppen*/
     margin-right: 8vw;
 }
-nav label{
+nav label{ /*Berättar var för någonstans som labeln för menyknappen ska  placeras.*/
     position: relative;
     float: right;
-    margin-top: -6vh;
+    margin-top: -6vh; /*Negativ marginal används för att få den närmare toppen*/
     margin-right: 6vw;
 
     display: none;
 }
 
-nav input:checked ~ div{
-    display: grid;
+nav input:checked ~ ul{ /*Ifall checkboxen =checked visar den ul*/
+    display: block;
 }
 
-nav div {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-
-    gap: 1px;
-    text-align: center;
-    font-size: 3vh;
-
+nav ul { /*Berättar menyn ska visas.*/
     display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li { /*Berättar att det ska finnas en gräns mellan varje li.*/
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+nav li a{ /*Berättar hur länkar ska visas i menyn*/
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: rgb(188, 188, 235);
 }
 
 main{
     background-color: rgba(255, 255, 255, 0.7);
-    
 }
 
 footer {
@@ -152,10 +155,8 @@ table, td, th {
     border: 0.5vh solid grey;
 }
 
-#List article{
-    margin: 0.5vh;
-    border: 0.5vh solid grey;
-    border-radius: 10px;
+#List ul{
+    list-style-type: none;
 }
 
 #List img{
@@ -201,13 +202,8 @@ table, td, th {
    
     body{
         display: grid;
-        grid-template-rows: 15vh 5vh auto 10vh;
+        grid-template-rows: 15vh 1em auto 10vh;
         grid-template-columns: 1fr;
-        grid-area: 
-        "header"
-        "nav"
-        "main"
-        "footer";
     
         gap: 0px;
         margin: 0;
@@ -222,31 +218,47 @@ table, td, th {
         font-size: 4vh;
     }
 
-    nav div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 0.2vh;
-
-        margin-left: 10vw;
-        margin-right: 10vw;
-        column-gap: 1px;
-        text-align: center;
-        font-size: 3vh;
+    nav ul {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
     }
+
+    nav li{
+        float: left;
+    }
+
+    nav li:hover{
+        background-color: rgb(138, 138, 238);
+    }
+
+    nav li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        background-color: rgb(188, 188, 235);
+    }
+
 
     nav input{
        display: none;
     }
 
-    nav a {
-        text-decoration: none;
-        color: black;
-
-        background-color: rgb(188, 188, 235);
-    }
-
     main{
         background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    a:visited {
+        color: teal;
+    }
+    
+    a:active{
+        color: #FFFFFF;
     }
 
     footer {
@@ -254,7 +266,7 @@ table, td, th {
         border: 0.5vh solid grey;
     }
 
-    a{
+    a:link{
         text-decoration: none;
         color: black;
     }
@@ -270,16 +282,16 @@ table, td, th {
         margin-right: 20vw;
         text-align: center;
         border: 0.5vh solid grey;
-   }
+    }
 
    #Index article{
         margin: 0.5vh;
         border: 0.5vh solid grey;
         
         border-radius: 10px;
-   }
+    }
 
-   #Index img{
+    #Index img{
         margin-top: 2vh;
         width: 59vw;
         height: 29vh;
@@ -297,12 +309,12 @@ table, td, th {
     /*/////////////////////////////*/
  
     #Recension main {
-        margin-top: -1.5vh;
+        margin-top: -1.5vh; /*Negativ marginal används för att få den närmare toppen*/
         margin-left: 2vw;
         margin-right: 2vw;
     }
 
-    #Recension main div {
+    #Recension main article {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -335,33 +347,21 @@ table, td, th {
          border: 0.5vh solid grey;
     }
  
-    #List article{
-         margin: 0.5vh;
-         border: 0.5vh solid grey;
-         
-         border-radius: 10px;
+    #List ul {
+        list-style-type: none;
     }
  
     #List img{
          width: 50vw;
          height: 30vh;
     }
- 
-    #List article a{
-        text-decoration: none;
-        color:rgb(14, 6, 14);
-    }
+
  
     /*/////////////////////////////*/
 
     .Split{
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
-
-    #About_us a{
-        text-decoration: none;
-        color: black;
     }
 
     #About_us main {
