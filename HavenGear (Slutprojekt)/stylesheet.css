@@ -31,7 +31,7 @@ nav input{ /*Berättar var för någonstans som knappen för drop-down menyn ska
 nav label{ /*Berättar var för någonstans som labeln för menyknappen ska  placeras.*/
     position: relative;
     float: right;
-    margin-top: -6vh; /*Negativ marginal används för att få den närmare toppen*/
+    margin-bottom: 6vh;
     margin-right: 6vw;
 
     display: none;
@@ -62,33 +62,33 @@ nav li a{ /*Berättar hur länkar ska visas i menyn*/
     background-color: rgb(188, 188, 235);
 }
 
-main{
+main{ /*Ger main en bakgrundsfärg*/
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-footer {
+footer {/*Ger design åt footer*/
     text-align: center;
     margin-top: 1.5vh;
     background-color: white;
     border: 0.5vh solid grey;
 }
 
-a{
+a{ /*ger en basdesign åt alla länkar*/
     text-decoration: none;
     color: black;
 }
 
-nav a {
+nav a { /*Ger en design för länkar under nav.*/
     text-decoration: none;
     color: black;
     background-color: rgb(206, 205, 236);
 }
 
-table, td, th {
+table, td, th { /*Ger alla tabeller en design*/
     border: 2px solid grey;
 }
 
-#Index main {
+#Index main { /*ger design åt main på Index sidan*/
     display: grid;
     grid-template-rows: auto;
 
@@ -107,10 +107,6 @@ table, td, th {
     width: 90vw;
     height: 30vh;
     
-}
-
-#Index .img_2{
-    height: 45vh;
 }
 
 #Index article a{
@@ -198,9 +194,9 @@ table, td, th {
 
 /*//////////////////////////////////*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) { /*Följande CSS gäller när en traditionell enhet används*/
    
-    body{
+    body{ /*Ger en grundesign*/
         display: grid;
         grid-template-rows: 15vh 1em auto 10vh;
         grid-template-columns: 1fr;
@@ -231,11 +227,11 @@ table, td, th {
         float: left;
     }
 
-    nav li:hover{
+    nav li:hover{ /*När muspekaren är över en li ändras bakgrundsfärgen.*/
         background-color: rgb(138, 138, 238);
     }
 
-    nav li a{
+    nav li a{ 
         display: block;
         color: white;
         text-align: center;
@@ -245,7 +241,7 @@ table, td, th {
     }
 
 
-    nav input{
+    nav input{ /*Ser till så att meny knappen inte syns på en traditionell platform.*/
        display: none;
     }
 
@@ -253,11 +249,15 @@ table, td, th {
         background-color: rgba(255, 255, 255, 0.7);
     }
 
-    a:visited {
+    a:visited { /*När en länk har använts innan byter den färg.*/
         color: teal;
     }
+
+    a:focus{ /*När en länk ligger i focus byter den färg.*/
+        color: orange;
+    }
     
-    a:active{
+    a:active{ /*När en länk aktiveras byter den färg.*/
         color: #FFFFFF;
     }
 
@@ -273,7 +273,7 @@ table, td, th {
 
     /*/////////////////////////////*/
 
-   #Index main {
+   #Index main { /*Ger design på Index main.*/
         display: grid;
         grid-template-rows: auto;
 
@@ -301,15 +301,10 @@ table, td, th {
         height: 50vh;
     }
 
-    #Index article a{
-        text-decoration: none;
-        color:rgb(14, 6, 14);
-    }
-
     /*/////////////////////////////*/
  
     #Recension main {
-        margin-top: -1.5vh; /*Negativ marginal används för att få den närmare toppen*/
+        margin-bottom: 1.5vh; 
         margin-left: 2vw;
         margin-right: 2vw;
     }
@@ -317,6 +312,11 @@ table, td, th {
     #Recension main article {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    #Recension h3:first-child{
+        font-size: 150%;
+        color: rgb(105, 23, 103);
     }
 
     #Recension p{
@@ -347,7 +347,7 @@ table, td, th {
          border: 0.5vh solid grey;
     }
  
-    #List ul {
+    #List ul { /*Ger listan en design */
         list-style-type: none;
     }
  
@@ -377,7 +377,7 @@ table, td, th {
         border-radius: 10px;
     }
 
-    #About_us article form{
+    #About_us article form{ /*Ger design åt formulär innaför en article på about us sidan.*/
         text-align: left;
         margin-left: 10vw;
         margin-bottom: 5vh;
