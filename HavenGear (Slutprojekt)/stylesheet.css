@@ -261,6 +261,10 @@ table, td, th { /*Ger alla tabeller en design*/
         color: #FFFFFF;
     }
 
+    a:hover{
+        color: blueviolet;
+    }
+
     footer {
         text-align: center;
         border: 0.5vh solid grey;
